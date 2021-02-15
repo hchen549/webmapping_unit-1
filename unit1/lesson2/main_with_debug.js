@@ -107,25 +107,5 @@ function addEvents() {
   $("table").on("click", clickme);
 }
 
-function debugAjax() {
-  var mydata;
-
-  $.ajax("data/MegaCities.geojson", {
-    dataType: "json",
-    success: function (response) {
-      debugCallback(response);
-    },
-  });
-
-  // $(mydiv).append("<br>GeoJSON data:<br>" + JSON.stringify(mydata));
-}
-
-function debugCallback(response) {
-  $(mydiv).append("<br>GeoJSON data: <br> " + JSON.stringify(response));
-}
-
-// $(mydiv).append("GeoJSON data: " + JSON.stringify(mydata));
 //call the initialize function when the document has loaded
 $(document).ready(initialize);
-// $(document).ready(jQueryAjax);
-$(document).ready(debugAjax);
